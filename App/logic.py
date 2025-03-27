@@ -213,10 +213,10 @@ def add_book_author_and_year(catalog, author_name, book):
         else:
             books = al.new_list()
             al.add_last(books, book)
-            pub_year_map = lp.new_map(100000,0.7)
-            lp.put(pub_year_map,pub_year,book)
+            pub_year_map = lp.new_map(1000,0.7)
+            lp.put(pub_year_map,pub_year,books)
     else:
-        author_map = lp.new_map(100000,0.7)
+        author_map = lp.new_map(1000,0.7)
         books = al.new_list()
         al.add_last(books, book)
         lp.put(author_map,pub_year,books)
